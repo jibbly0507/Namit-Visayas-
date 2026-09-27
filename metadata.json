@@ -1,0 +1,6 @@
+{
+  "name": "Namit 4 Visayas - Food Tourism Website",
+  "description": "Tourism and Promotion Services practical exam project by Group 4 featuring 8 signature Western Visayas delicacies, member submissions, interactive diner map, and local ratings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
