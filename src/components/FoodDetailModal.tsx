@@ -1,6 +1,6 @@
 import React from 'react';
 import { FoodItem } from '../types';
-import { X, ChefHat, Sparkles } from 'lucide-react';
+import { X, Sparkles } from 'lucide-react';
 
 interface FoodDetailModalProps {
   item: FoodItem | null;
@@ -102,7 +102,7 @@ export const FoodDetailModal: React.FC<FoodDetailModalProps> = ({
             </div>
           </div>
 
-          {/* Description & Cultural Story */}
+          {/* Description */}
           <div className="space-y-3">
             <h4 className="text-sm font-bold text-[#1E1B18] uppercase tracking-wide">
               Culinary Description & Flavors
@@ -110,47 +110,6 @@ export const FoodDetailModal: React.FC<FoodDetailModalProps> = ({
             <p className="text-sm text-[#4A433A] leading-relaxed">
               {item.description}
             </p>
-          </div>
-
-          <div className="space-y-3 p-4 bg-[#FAF5EE] rounded-xl border border-[#EADFCF]">
-            <h4 className="text-sm font-bold text-[#0F4C3A] uppercase tracking-wide flex items-center gap-2">
-              <ChefHat className="w-4 h-4" />
-              <span>Cultural Heritage & Significance in Western Visayas</span>
-            </h4>
-            <p className="text-sm text-[#524B42] leading-relaxed">
-              {item.culturalBackground}
-            </p>
-          </div>
-
-          {/* Key Ingredients & Pairings */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="p-4 rounded-xl bg-white border border-[#E5DACD] space-y-2">
-              <h5 className="text-xs font-bold text-[#1E1B18] uppercase tracking-wide">
-                Key Ingredients & Preparation
-              </h5>
-              <ul className="text-xs text-[#5C544B] space-y-1 list-disc pl-4">
-                {item.keyIngredients.map((ing, i) => (
-                  <li key={i}>{ing}</li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="p-4 rounded-xl bg-white border border-[#E5DACD] space-y-2">
-              <h5 className="text-xs font-bold text-[#1E1B18] uppercase tracking-wide">
-                Best Pairing & Serving Style
-              </h5>
-              <p className="text-xs text-[#5C544B] leading-relaxed">
-                {item.bestPairing}
-              </p>
-              <div className="pt-2 border-t border-[#F0E6D8]">
-                <div className="text-[11px] font-semibold text-[#BF360C]">
-                  Fun Cultural Fact:
-                </div>
-                <div className="text-xs text-[#6E6457] mt-0.5">
-                  {item.funFact}
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
