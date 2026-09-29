@@ -66,11 +66,10 @@ export const INITIAL_FOOD_ITEMS: FoodItem[] = [
   }
 ];
 
-// Helper function iti baba para iti YouTube URL processing
+// Helper function for YouTube URL processing
 export function extractYouTubeId(urlOrId: string): string {
   if (!urlOrId) return '';
-  const match = urlOrId.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
-  return match ? match[1] : urlOrId;
-}
-  return trimmed;
+  const trimmed = urlOrId.trim();
+  const match = trimmed.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
+  return match ? match[1] : trimmed;
 }
